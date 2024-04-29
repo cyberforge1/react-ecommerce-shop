@@ -42,7 +42,7 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 Emphasized the use of functional components in React and hooks for state management. Decision to use Firestore was driven by the need for real-time data updates and easy scalability.
 
 ## Issues & Bugs
-Currently addressing an error in the favorite page functionality where items occasionally fail to update the favorited status correctly.
+Currently addressing an error with the functions related to favouriting products.
 
 ## Additions & Improvements
 Future enhancements include:
