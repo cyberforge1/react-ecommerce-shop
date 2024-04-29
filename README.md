@@ -7,8 +7,8 @@ This project showcases a fully functional e-commerce website using React, design
 This e-shop is live! Check it out [here](#).
 
 ## Screenshot
-![E-shop Homepage](home-page.png)
-![E-shop Cartpage](cart-page.png)
+![E-shop Homepage](public/home-page.png)
+![E-shop Cartpage](public/cart-page.png)
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
