@@ -1,58 +1,62 @@
-# React E-Commerce Shop
+# README BLUEPRINT
 
-# Project Overview
-This React-based e-commerce application allows users to view, add, and manage products in a shopping cart using Firestore to store product data. The project focuses on using React framework features like react-router-dom and Firestore integration to build a dynamic e-shop.
+## Project Overview
+This project showcases a fully functional e-commerce website using React, designed to enhance my understanding and skills in web development. It leverages Firestore for data management and react-router-dom for seamless navigation.
 
-# Screenshots
+## Deployment Link
+This e-shop is live! Check it out [here](#).
 
-![Home Page](./public/home-page.png)
+## Screenshot
+![E-shop Homepage](home-page.png)
+![E-shop Cartpage](cart-page.png)
 
+## Table of Contents
+- [Tech Stack](#tech-stack)
+- [Goals](#goals)
+- [How to use](#how-to-use)
+- [Implementation](#implementation)
+- [Code / Important Elements / Design Decisions](#code--important-elements--design-decisions)
+- [Issues & Bugs](#issues--bugs)
+- [Additions & Improvements](#additions--improvements)
 
-![Favorites Page](./public/favorites-page.png)
+## Tech Stack
+- HTML
+- CSS/SCSS
+- JavaScript
+- Git
+- React
+- React Router DOM
+- Google Firestore
 
+## Goals
+The primary goal is to build a reactive e-shop website to demonstrate the ability to fetch and manage data using Firebase, navigate between different components with React Router, and implement dynamic user interactions.
 
-![Cart Page](./public/cart-page.png)
+## How to use
+To start exploring the e-shop, visit the homepage where you can browse products, view details, and add items to your cart. Use the navigation links to switch between different views and manage your cart.
 
+## Implementation
+- **MVP (basic requirements):** The website features a home page with a grid of products and a detailed product page allowing item addition to the cart.
+- **User Interface:** The design is responsive, focusing on usability across devices.
+- **Logic Strategy:** Data fetching from Firestore ensures real-time product updates without needing static data.
 
-# Table of Contents
-- Goals
-- How to Use
-- Tech Stack
-- Implementation
-- Code Function & Design Decisions
-- Issues & Bugs
-- Additions & Improvements
+## Code / Important Elements / Design Decisions
+Emphasized the use of functional components in React and hooks for state management. Decision to use Firestore was driven by the need for real-time data updates and easy scalability.
 
-# Goals
-The primary goals of this project are to practice fetching data within a React app, navigate using react-router-dom, and manage state and backend interactions through Firestore. Additionally, implementing a functional cart system showcases dynamic data handling and user interaction.
+## Issues & Bugs
+Currently addressing an error in the favorite page functionality where items occasionally fail to update the favorited status correctly.
 
-# How to Use / Important Elements
-To use this application, navigate using the menu to view products on the home page or access specific product details. Users can add products to the cart, adjust quantities, or remove items. Ensure you have internet connectivity to fetch the latest product data and manage cart contents.
+## Additions & Improvements
+Future enhancements include:
+- More attractive card components.
+- A unique component for favorited products.
+- Improved responsiveness and additional Bootstrap features for better layout across different devices.
+- A loading spinner for better user experience during data fetch.
+- Integration of Stripe for test mode transactions.
 
-# Tech Stack
-This project uses React.js for the frontend framework, Firestore for data management, and react-router-dom for routing. The application styling is enhanced with Bootstrap for responsive layouts.
+## Learning Highlights
+This project has been instrumental in understanding React's lifecycle, the importance of state management, and the complexities of integrating a NoSQL database like Firestore.
 
-# Implementation
-
-### MVP (basic requirements)
-- Home Page with a grid of products and a carousel for featured products.
-- Product Page for individual products, allowing users to add items to the cart and choose variants.
-
-### User Interface
-- The UI utilizes Bootstrap for responsive design, ensuring accessibility on different devices and viewport sizes.
-
-### Logic Strategy
-- Firestore handles all product data, including stock levels which are checked against the cart contents to prevent over-adding unavailable items.
-
-# Code
-The codebase is structured around React components for each page and feature, Firestore queries for data handling, and routing managed by react-router-dom. Components are designed to be reusable and modular.
-
-# Issues / Bugs
-
-# Potential Additions
-- New product photos to enhance visual appeal and update product listings.
-- Implementing a loading spinner to improve user experience during data fetch operations.
-- Integration of a payment system like Stripe to process transactions in test mode.
-- Additions of Modals for Specific Products 
-- New Component for Favorites Page
-- Addition of 'add to cart' link on HomePage and in Favorites
+Contact Me:
+- Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
+- Visit my [GitHub](https://github.com/cyberforge1) for more projects.
+- Or send me an email at obj809@gmail.com
