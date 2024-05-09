@@ -1,4 +1,4 @@
-# REACT E-COMMERCE SHOP
+# REACT E-COMMERCE STORE
 
 ## Project Overview
 This project showcases a fully functional e-commerce website using React, designed to enhance my understanding and skills in web development. It leverages Firestore for data management and react-router-dom for seamless navigation.
