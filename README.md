@@ -4,7 +4,7 @@
 This project showcases a fully functional e-commerce website using React, designed to enhance my understanding and skills in web development. It leverages Firestore for data management and react-router-dom for seamless navigation.
 
 ## Deployment Link
-This e-shop is live! Check it out [here](#).
+This e-shop is live! Check it out [here](https://react-ecommerce-store-project.netlify.app/).
 
 ## Screenshot
 ![E-shop Homepage](public/home-page.png)
