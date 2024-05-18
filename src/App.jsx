@@ -1,3 +1,7 @@
+// App.jsx
+
+
+
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
@@ -8,6 +12,7 @@ import CartPage from './pages/CartPage/CartPage.jsx';
 import ProductPage from './pages/ProductPage/ProductPage.jsx';
 import ProductLoader from './containers/ProductLoader/ProductLoader.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.module.scss';
 
 function App() {
   return (

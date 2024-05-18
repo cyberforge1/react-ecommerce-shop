@@ -1,4 +1,6 @@
 // FavoritesPage.jsx
+
+
 import React, { useState, useEffect } from 'react';
 import styles from './FavoritesPage.module.scss';
 import ProductCard from '../../components/ProductCard/ProductCard';

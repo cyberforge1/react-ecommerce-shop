@@ -1,3 +1,5 @@
+// ProductPage.jsx
+
 import React from 'react'
 import styles from './ProductPage.module.scss'
 import SingleProduct from '../../components/SingleProduct/SingleProduct';

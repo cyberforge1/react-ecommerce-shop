@@ -1,3 +1,5 @@
+// HomePage.jsx
+
 import React from 'react'
 import styles from './HomePage.module.scss'
 import Carousel from '../../components/Carousel/Carousel'

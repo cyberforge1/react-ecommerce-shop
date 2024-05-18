@@ -1,3 +1,6 @@
+// SingleProduct.jsx
+
+
 import React, { useState } from 'react';
 import styles from './SingleProduct.module.scss';
 import { Link } from "react-router-dom";

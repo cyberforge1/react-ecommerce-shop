@@ -1,3 +1,6 @@
+// CartPage.jsx
+
+
 import React, { useEffect, useState } from 'react';
 import styles from './CartPage.module.scss';
 import CartProductCard from '../../components/CartProductCard/CartProductCard';

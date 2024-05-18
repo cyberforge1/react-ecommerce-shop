@@ -1,3 +1,6 @@
+// NavBar.jsx
+
+
 import styles from "./NavBar.module.scss";
 import { NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';

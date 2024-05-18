@@ -1,3 +1,6 @@
+// Carousel.jsx
+
+
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.scss';
 

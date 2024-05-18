@@ -1,3 +1,6 @@
+// ProductsPage.jsx
+
+
 import React, { useState, useEffect } from 'react'
 import styles from './ProductsPage.module.scss'
 import ProductContainer from '../../containers/ProductContainer/ProductContainer';

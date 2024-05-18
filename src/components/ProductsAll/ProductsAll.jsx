@@ -1,3 +1,5 @@
+// ProductsAll.jsx
+
 import React, { useState, useEffect } from 'react'
 import styles from './ProductsAll.module.scss'
 import ProductCard from '../ProductCard/ProductCard.jsx'
