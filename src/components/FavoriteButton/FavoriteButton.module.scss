@@ -1,6 +1,25 @@
 // FavoriteButton.module.scss
-
 .button {
-    height: 50px;
-    width: 50px;
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: auto; /* Adjust height */
+    width: auto; /* Adjust width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Add pointer cursor */
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove any box-shadow */
+}
+
+.button:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove any box-shadow */
+}
+
+.button svg {
+    color: #e74c3c; /* Optional: Set icon color */
+    display: block; /* Ensure SVG is block-level */
 }
