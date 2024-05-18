@@ -16,7 +16,7 @@ const Carousel = ({ slides }) => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000);
+    const timer = setInterval(nextSlide, 8000);
     return () => clearInterval(timer);
   }, [slides.length]);
 

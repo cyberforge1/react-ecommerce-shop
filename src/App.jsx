@@ -13,6 +13,7 @@ import ProductPage from './pages/ProductPage/ProductPage.jsx';
 import ProductLoader from './containers/ProductLoader/ProductLoader.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.module.scss';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/:id" element={<ProductLoader />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   </>
   );

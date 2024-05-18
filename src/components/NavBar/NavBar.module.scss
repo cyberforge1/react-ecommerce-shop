@@ -2,42 +2,83 @@
 
 .nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 1em;
-  gap: 0.5em;
-  height: 50px;
-  color: black;
+  padding: 0 2rem;
+  height: 80px;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid black;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 20px;
+  color: #333;
+  margin-right: 30px;
+
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
 }
 
 .link {
   text-decoration: none;
-  color: black; 
-  font-size: 70px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
 
   &:visited {
-    color: black; 
+    color: black;
   }
 
   &:hover {
-    color: black; 
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+    color: red;
+    transition: color 0.3s ease;
   }
 
   &_active {
-    color: black; 
+    color: red;
     text-decoration: underline;
 
     &:visited {
-      color: black; 
+      color: red;
     }
 
     &:hover {
-      color: black; 
-      transform: scale(1.1);
-      transition: transform 0.3s ease;
+      color: darkred;
+      transition: color 0.3s ease;
     }
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 20px;
+  color: black;
+
+  &:hover {
+    color: red;
+    transition: color 0.3s ease;
   }
 }
