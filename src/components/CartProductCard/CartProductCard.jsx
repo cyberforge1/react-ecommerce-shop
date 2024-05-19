@@ -45,11 +45,8 @@ const CartProductCard = ({ product, onUpdate }) => {
             </div>
             <div className={styles.info}>
                 <h2 className={styles.productName}>{product.name}</h2>
-                <p className={styles.productId}>Product ID: {product.id}</p>
                 <p className={styles.productDetails}>Colour: {product.colour}</p>
                 <p className={styles.productDetails}>Size: {product.size}</p>
-                <p className={styles.productAvailability}>Adelaide Stores & Online Exclusive, Limited Store</p>
-                <p className={styles.productOffer}>Limited Time Offer Until May 22</p>
                 <p className={styles.productPrice}>${product.price}</p>
                 <div className={styles.quantityContainer}>
                     <p className={styles.quantityLabel}>Quantity:</p>

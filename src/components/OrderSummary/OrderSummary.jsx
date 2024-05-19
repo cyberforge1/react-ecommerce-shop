@@ -16,21 +16,10 @@ const OrderSummary = ({ subtotal, itemCount }) => {
                     <span>${subtotal.toFixed(2)}</span>
                 </div>
                 <div className={styles.detailRow}>
-                    <span>SUBTOTAL</span>
-                    <span>${subtotal.toFixed(2)}</span>
-                </div>
-                <div className={styles.detailRow}>
                     <span>ORDER TOTAL</span>
                     <span>${subtotal.toFixed(2)}</span>
                 </div>
-                <div className={styles.coupon}>
-                    <span>Coupon</span>
-                    <span>></span>
-                </div>
                 <div className={styles.deliveryInfo}>
-                    <p>
-                        Click & Collect to send your parcel to your preferred store with FREE DELIVERY and no minimum spend. Altered items are final sale (no change of mind refund/exchanges).
-                    </p>
                 </div>
                 <div className={styles.actions}>
                     <button className={styles.checkoutButton}>CHECKOUT</button>

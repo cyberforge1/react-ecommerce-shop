@@ -46,8 +46,6 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                 <h2>{name}</h2>
                 <p className={styles.oldPrice}>${oldPrice.toFixed(2)}</p>
                 <p className={styles.newPrice}>${price.toFixed(2)}</p>
-                <p className={styles.promo}>Limited Time Offer Until {promoEndDate}</p>
-                <p>{storeInfo}</p>
                 <div className={styles.colorOptions}>
                     <p>Colour: {selectedColor}</p>
                     {colors.map((color, index) => (
@@ -76,8 +74,7 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                         type="number"
                         id="quantity"
                         value={quantityState}
-                        onChange={(e) => setQuantityState(parseInt(e.target.value))}
-                        min="0"
+                        readOnly
                     />
                 </div>
                 <div className={styles.buttonGroup}>
