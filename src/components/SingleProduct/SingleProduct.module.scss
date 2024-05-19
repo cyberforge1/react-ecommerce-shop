@@ -1,58 +1,86 @@
 // SingleProduct.module.scss
 
 
-
 .container {
-    border: 2px solid black;
-    width: 800px;
-    height: 400px;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    background-color: whitesmoke;  // Matching background color with ProductCard
-    border-radius: 10px;  // Rounded corners like ProductCard
-    margin-top: 30px;  // Consistent margin
+    display: flex;
+    width: 1000px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    font-family: Arial, sans-serif;
 }
 
 .imgCard {
-    border: 1px solid black;
-    width: 50%;  // Adjusted to take half of the container's width
-    height: 100%;  // Adjusted to take full height of the container
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;  // Keeps any overflowing parts of the image from being visible
-    border-radius: 10px;  // Optional for rounded corners
-    position: relative;  // Ensures the positioning context is set for the image
-}
-
-
-.textCard {
-    border: 1px solid black;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  // Adjusted for internal spacing
-    align-items: center;
-    padding: 20px;  // Padding for internal spacing
-    border-radius: 10px;  // Consistency in rounding corners
+    background: #f9f9f9;
 }
 
 .imageStyle {
-    width: 100%;  // Forces the image to expand to fill the width
-    height: 100%;  // Forces the image to expand to fill the height
-    object-fit: cover;  // Covers the area, clips the excess, maintains aspect ratio
-    object-position: center center;  // Centers the image in both dimensions
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+.textCard {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.newPrice {
+    font-size: 1.5em;
+    color: #e60023;
+}
+
+.promo {
+    color: #e60023;
+    font-weight: bold;
+}
+
+.colorOptions, .sizeOptions {
+    margin: 10px 0;
+}
+
+.colorBox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.sizeButtons {
+    display: flex;
+    gap: 5px;
+}
+
+.sizeButton {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .buttonGroup {
     display: flex;
-    justify-content: space-around;  // This places the buttons with space in between
-    width: 100%;  // Ensures the buttons are spaced over the full width of the text card
-}
-
-.error {
-    color: red;
-    font-weight: bold;
+    justify-content: space-between;
 }

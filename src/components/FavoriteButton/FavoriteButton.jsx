@@ -10,13 +10,13 @@ import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import styles from './FavoriteButton.module.scss';
 
 const FavoriteButton = ({ product, onFavoriteToggle }) => {
-    const [isToggled, setIsToggled] = useState(product.favourited);
+    const [isToggled, setIsToggled] = useState(product.favorited);
 
     useEffect(() => {
         const docRef = doc(db, "products", product.id);
         const unsubscribe = onSnapshot(docRef, (doc) => {
             if (doc.exists()) {
-                setIsToggled(doc.data().favourited);
+                setIsToggled(doc.data().favorited);
             }
         });
 
@@ -24,11 +24,11 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
     }, [product.id]);
 
     const toggle = async () => {
-        const newFavourited = !isToggled;
+        const newFavorited = !isToggled;
         const docRef = doc(db, "products", product.id);
-        await updateDoc(docRef, { favourited: newFavourited });
-        setIsToggled(newFavourited);
-        onFavoriteToggle(product.id, newFavourited);
+        await updateDoc(docRef, { favorited: newFavorited });
+        setIsToggled(newFavorited);
+        onFavoriteToggle(product.id, newFavorited);
     };
 
     return (

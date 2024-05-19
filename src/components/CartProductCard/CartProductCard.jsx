@@ -44,18 +44,26 @@ const CartProductCard = ({ product, onUpdate }) => {
                 <img src={product.imageUrl} alt={product.name} className={styles.image}/>
             </div>
             <div className={styles.info}>
-                <h2>{product.name}</h2>
-                <p>Quantity in Cart: {product.quantityInCart}</p>
-                <div className={styles.buttons}>
-                    <button onClick={handleIncrement} className="btn btn-success">+</button>
-                    <button onClick={handleDecrement} className="btn btn-warning">-</button>
-                    <button onClick={handleRemoveAll} className="btn btn-danger">🗑</button>
+                <h2 className={styles.productName}>{product.name}</h2>
+                <p className={styles.productId}>Product ID: {product.id}</p>
+                <p className={styles.productDetails}>Colour: {product.colour}</p>
+                <p className={styles.productDetails}>Size: {product.size}</p>
+                <p className={styles.productAvailability}>Adelaide Stores & Online Exclusive, Limited Store</p>
+                <p className={styles.productOffer}>Limited Time Offer Until May 22</p>
+                <p className={styles.productPrice}>${product.price}</p>
+                <div className={styles.quantityContainer}>
+                    <p className={styles.quantityLabel}>Quantity:</p>
+                    <select className={styles.quantitySelect} value={product.quantityInCart} onChange={(e) => onUpdate(product.id, e.target.value)}>
+                        {[...Array(10).keys()].map(i => (
+                            <option key={i} value={i + 1}>{i + 1}</option>
+                        ))}
+                    </select>
                 </div>
-                <Link to={`/products/${product.id}`}>View Product</Link>
+                <p className={styles.subtotal}>Subtotal: ${product.price * product.quantityInCart}</p>
+                <button onClick={handleRemoveAll} className={styles.removeButton}>X</button>
             </div>
         </div>
     );
 };
 
 export default CartProductCard;
-

@@ -1,9 +1,9 @@
 // ProductsAll.jsx
 
-import React, { useState, useEffect } from 'react'
-import styles from './ProductsAll.module.scss'
-import ProductCard from '../ProductCard/ProductCard.jsx'
-import { getAllProducts } from '../../services/firebase-service'
+import React, { useState, useEffect } from 'react';
+import styles from './ProductsAll.module.scss';
+import ProductCard from '../ProductCard/ProductCard.jsx';
+import { getAllProducts } from '../../services/firebase-service';
 
 const ProductsAll = () => {
 
@@ -16,16 +16,14 @@ const ProductsAll = () => {
     }, []);
 
     return (
-      <div>
-      <div className={styles.content}>
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <div className={styles.contentContainer}>
+        <div className={styles.content}>
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
   );
-  };
+};
 
-
-
-export default ProductsAll
+export default ProductsAll;

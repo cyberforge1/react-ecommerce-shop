@@ -3,76 +3,89 @@
 .card {
   display: flex;
   gap: 20px;
-  width: 900px;
-  height: 250px;
-  border: 2px solid black;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  margin-top: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .imageContainer {
-  width: 220px;
-  height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding-left: 20px;
+  flex: 0 0 150px;
 }
 
 .image {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  border-radius: 10px;
-  border: 1px solid black;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .info {
   flex: 1;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-h2, p {
-  margin: 5px 0;
-}
-
-.buttons {
-  display: flex;
   gap: 10px;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007BFF;
-  color: white;
-  text-transform: uppercase;
+.productName {
+  font-size: 18px;
   font-weight: bold;
+}
+
+.productId,
+.productDetails,
+.productAvailability,
+.productOffer,
+.productPrice,
+.subtotal {
+  margin: 0;
+  color: #555;
+}
+
+.productPrice {
+  font-size: 20px;
+  color: #d9534f;
+}
+
+.productOffer {
+  color: #d9534f;
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityLabel {
+  font-size: 16px;
+}
+
+.quantitySelect {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.subtotal {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.removeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #d9534f;
+  font-size: 20px;
   cursor: pointer;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
-}
-
-button:active {
-  background-color: #004085; 
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-}
-
-a {
-  text-decoration: none;
-  color: blue;
+.removeButton:hover {
+  color: #c9302c;
 }
