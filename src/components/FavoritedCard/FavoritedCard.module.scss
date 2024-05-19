@@ -3,18 +3,19 @@
 .card {
   display: flex;
   width: 100%;
-  padding: 1em;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  margin-bottom: 20px;
 }
 
 .imageWrapper {
   position: relative;
-  width: 225px;
-  height: 225px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -22,6 +23,9 @@
   position: absolute;
   top: 10px;
   right: 10px;
+
+  cursor: pointer;
+  z-index: 100; /* Ensure the button is above the image */
 }
 
 .image {
@@ -34,7 +38,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 1em;
+  padding: 0 20px;
   flex: 1;
 }
 

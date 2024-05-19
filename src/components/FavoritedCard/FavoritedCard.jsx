@@ -10,29 +10,29 @@ const FavoritedCard = ({ product, onFavoriteToggle }) => {
   }
 
   return (
-    <div className={styles.container}>
-      <article className={styles.card}>
-        <div className={styles.imageWrapper}>
-          <img src={product.imageUrl} alt={product.name} className={styles.image} />
-          <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} className={styles.favoriteButton} />
-        </div>
-        <div className={styles.info}>
-          <h4 className={styles.productName}>{product.name}</h4>
-          <p className={styles.productId}>Product ID: {product.id}</p>
-          <p className={styles.color}>Colour: {product.color}</p>
-          <p className={styles.size}>Size: {product.size}</p>
-          <p className={styles.availability}>{product.availability}</p>
-          <div className={styles.priceSection}>
-            {product.discountedPrice && (
-              <p className={styles.discountedPrice}>${product.discountedPrice}</p>
-            )}
+    <div className={styles.card}>
+      <div className={styles.imageWrapper}>
+      <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} className={styles.favoriteButton} />
+        <img src={product.imageUrl} alt={product.name} className={styles.image} />
+      </div>
+      <div className={styles.info}>
+        <h4 className={styles.productName}>{product.name}</h4>
+        <p className={styles.productId}>Product ID: {product.id}</p>
+        <p className={styles.color}>Colour: {product.color}</p>
+        <p className={styles.size}>Size: {product.size}</p>
+        <p className={styles.availability}>{product.availability}</p>
+        <div className={styles.priceSection}>
+          {product.discountedPrice && (
+            <p className={styles.discountedPrice}>${product.discountedPrice}</p>
+          )}
+          {product.originalPrice && (
             <p className={styles.originalPrice}>${product.originalPrice}</p>
-          </div>
-          {product.offer && (
-            <p className={styles.offer}>Limited Time Offer Until {product.offerEndDate}</p>
           )}
         </div>
-      </article>
+        {product.offer && (
+          <p className={styles.offer}>Limited Time Offer Until {product.offerEndDate}</p>
+        )}
+      </div>
     </div>
   );
 };
