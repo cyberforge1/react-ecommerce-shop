@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './CartPage.module.scss';
 import CartProductCard from '../../components/CartProductCard/CartProductCard';
 import { getCartProducts } from '../../services/firebase-service';
-import OrderSummary from '../../components/OrderSummary/OrderSummary'; // Import the OrderSummary component
+import OrderSummary from '../../components/OrderSummary/OrderSummary';
 
 const CartPage = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -46,18 +46,16 @@ const CartPage = () => {
                         <button className={styles.shopButton} onClick={redirectToProducts}>Shop Now</button>
                     </div>
                 ) : (
-                    <>
-                        <div className={styles.contentsWrapper}>
-                            <div className={styles.contents}>
-                                {cartItems.map(item => (
-                                    <CartProductCard key={item.id} product={item} onUpdate={handleQuantityUpdate} />
-                                ))}
-                            </div>
+                    <div className={styles.populatedContainer}>
+                        <div className={styles.contents}>
+                            {cartItems.map(item => (
+                                <CartProductCard key={item.id} product={item} onUpdate={handleQuantityUpdate} />
+                            ))}
                         </div>
                         <div className={styles.rightSide}>
                             <OrderSummary subtotal={subtotal} itemCount={itemCount} />
                         </div>
-                    </>
+                    </div>
                 )}
             </div>
         </div>

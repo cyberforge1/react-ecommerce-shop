@@ -1,14 +1,16 @@
 // SearchResultsPage.jsx
 
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { getAllProducts } from '../../services/firebase-service';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import styles from './SearchResultsPage.module.scss';
+import buttonStyles from '../../components/SingleProduct/SingleProduct.module.scss'; // Import button styles
 
 const SearchResultsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
   const query = new URLSearchParams(location.search).get('query');
 
   useEffect(() => {
@@ -29,6 +31,10 @@ const SearchResultsPage = () => {
     }
   }, [query]);
 
+  const handleBackToProducts = () => {
+    navigate('/products');
+  };
+
   return (
     <div className={styles.container}>
       <h1>Search Results for "{query}"</h1>
@@ -40,6 +46,11 @@ const SearchResultsPage = () => {
         ) : (
           <p>No products found matching your search.</p>
         )}
+      </div>
+      <div className={styles.buttonContainer}>
+        <button onClick={handleBackToProducts} className={buttonStyles.backButton}>
+          BACK TO PRODUCTS
+        </button>
       </div>
     </div>
   );

@@ -1,31 +1,53 @@
 // HomePage.jsx
 
-import React from 'react'
-import styles from './HomePage.module.scss'
-import Carousel from '../../components/Carousel/Carousel'
-import ProductContainer from '../../containers/ProductContainer/ProductContainer'
-import ProductsAll from '../../components/ProductsAll/ProductsAll'
-
-import image1 from '/background-1.png'
-import image2 from '/background-2.png'
-import image3 from '/background-3.png'
+import React, { useEffect, useRef } from 'react';
+import HomePageSection from '../../components/HomePageSection/HomePageSection';
+import sampleImage1 from '/background-1.png'; // Replace with the path to your first image
+import sampleImage2 from '/background-2.png'; // Replace with the path to your second image
+import sampleImage3 from '/background-3.png'; // Replace with the path to your third image
+import 'fullpage.js/dist/fullpage.css'; // Import fullpage.js CSS
 
 const HomePage = () => {
+    const sectionRefs = useRef([]);
+    const currentIndex = useRef(0);
 
-  const slides = [
-    <img src={image1} alt="Slide 1" />,
-    <img src={image2} alt="Slide 2" />,
-    <img src={image3} alt="Slide 3" />
-  ];
+    useEffect(() => {
+        const handleWheel = (event) => {
+            if (event.deltaY > 0) {
+                // Scroll down
+                if (currentIndex.current < sectionRefs.current.length - 1) {
+                    currentIndex.current += 1;
+                    sectionRefs.current[currentIndex.current].scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // Scroll up
+                if (currentIndex.current > 0) {
+                    currentIndex.current -= 1;
+                    sectionRefs.current[currentIndex.current].scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
 
-  return (
-    <div className={styles.homepage}>
-      <Carousel slides={slides} />
-      <ProductContainer>
-        <ProductsAll />
-      </ProductContainer>
-    </div>
-  )
-}
+        window.addEventListener('wheel', handleWheel);
 
-export default HomePage
+        return () => {
+            window.removeEventListener('wheel', handleWheel);
+        };
+    }, []);
+
+    return (
+        <div>
+            <div ref={(el) => (sectionRefs.current[0] = el)}>
+                <HomePageSection imageUrl={sampleImage1} />
+            </div>
+            <div ref={(el) => (sectionRefs.current[1] = el)}>
+                <HomePageSection imageUrl={sampleImage2} />
+            </div>
+            <div ref={(el) => (sectionRefs.current[2] = el)}>
+                <HomePageSection imageUrl={sampleImage3} />
+            </div>
+        </div>
+    );
+};
+
+export default HomePage;

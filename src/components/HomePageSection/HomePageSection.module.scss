@@ -1,0 +1,36 @@
+/* HomePageSection.module.scss */
+
+.container {
+    width: 100vw;
+    min-height: calc(100vh - 80px); // Use min-height to allow for vertical elongation
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Keep the button on the right-hand side */
+}
+
+.buttonContainer {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #333;
+    }
+}

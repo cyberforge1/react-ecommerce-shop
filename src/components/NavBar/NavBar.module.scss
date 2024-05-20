@@ -1,4 +1,4 @@
-// NavBar.module.scss
+/* NavBar.module.scss */
 
 .nav {
   display: flex;
@@ -63,7 +63,8 @@
 .icon {
   font-size: 25px;
   color: black;
-  margin-right: 1rem;
+  margin-right: 10px;
+  cursor: pointer; /* Add this line to ensure pointer cursor on hover */
 
   &:hover {
     color: red;

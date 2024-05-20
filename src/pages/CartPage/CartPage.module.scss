@@ -6,61 +6,76 @@
     align-items: center;
     width: 100%;
     min-height: calc(100vh - 160px); // Use min-height to allow for vertical elongation
-  }
-  
-  .title {
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.title {
     margin: 20px 0;
-  }
-  
-  .container {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left; /* Align title to the left */
+    width: 80%; /* Match container width */
+}
+
+.container {
     display: flex;
-    width: 100%;
+    width: 80%; /* Reduced width for better spacing */
     min-height: 100%;
     flex-grow: 1;
-  }
-  
-  .emptyCart {
-    text-align: center;
-    flex: 1;
-  }
-  
-  .itemCount {
-    margin: 20px 0;
-  }
-  
-  .emptyTitle {
-    font-size: 24px;
-    margin: 20px 0;
-  }
-  
-  .shopButton {
+    flex-direction: column;
+    align-items: center; /* Center align items */
+}
+
+.emptyCart {
+    width: 100%;
+    text-align: start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.itemCount {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.emptyTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.shopButton {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .contentsWrapper {
-    width: 50%;
-    background-color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
+}
+
+.populatedContainer {
     display: flex;
-    justify-content: center;
-  }
-  
-  .contents {
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px; /* Reduced gap between the two sections */
+}
+
+.contents {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-  
-  .rightSide {
-    width: 50%;
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
+    gap: 20px;
+    width: 70%; /* Adjusted width to make more room */
+}
+
+.rightSide {
+    width: 28%; /* Adjusted width */
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
