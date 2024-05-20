@@ -1,8 +1,8 @@
 // FavoritedCard.jsx
 
 import React from 'react';
+import ProductImageWithFavorite from '../ProductImageWithFavorite/ProductImageWithFavorite';
 import styles from './FavoritedCard.module.scss';
-import FavoriteButton from '../FavoriteButton/FavoriteButton';
 
 const FavoritedCard = ({ product, onFavoriteToggle }) => {
   if (!product) {
@@ -12,8 +12,7 @@ const FavoritedCard = ({ product, onFavoriteToggle }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
-      <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} className={styles.favoriteButton} />
-        <img src={product.imageUrl} alt={product.name} className={styles.image} />
+        <ProductImageWithFavorite product={product} onFavoriteToggle={onFavoriteToggle} />
       </div>
       <div className={styles.info}>
         <h4 className={styles.productName}>{product.name}</h4>

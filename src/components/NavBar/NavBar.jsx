@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../../public/summit-shop-logo.png';
+import logo from '/summit-shop-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchForm from '../SearchForm/SearchForm';
 import styles from './NavBar.module.scss';

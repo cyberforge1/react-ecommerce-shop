@@ -32,7 +32,7 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
     };
 
     return (
-        <button onClick={toggle} className={`btn ${styles.button}`}>
+        <button onClick={toggle} className={`btn ${styles.button} ${isToggled ? styles.toggled : ''}`}>
             <FontAwesomeIcon icon={isToggled ? solidHeart : regularHeart} className="fa-2x" />
         </button>
     );

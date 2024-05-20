@@ -8,7 +8,7 @@ import { faGithubSquare, faTwitterSquare, faInstagramSquare, faLinkedin } from '
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>© 2022 Summit Shop</p>
+      <p>© 2024 Summit Shop</p>
       <div className={styles.icons}>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithubSquare} className={styles.icon} />
