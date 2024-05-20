@@ -19,10 +19,18 @@
     background: #f9f9f9;
 }
 
+.imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .imageStyle {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Ensure the image is square */
 }
 
 .textCard {
@@ -33,53 +41,64 @@
     justify-content: space-between;
 }
 
-.oldPrice {
-    text-decoration: line-through;
-    color: #999;
-}
-
 .newPrice {
     font-size: 1.5em;
     color: #e60023;
 }
 
-.promo {
-    color: #e60023;
-    font-weight: bold;
-}
-
-.colorOptions, .sizeOptions {
+.sizeOptions {
+    display: flex;
+    align-items: center;
     margin: 10px 0;
 }
 
-.colorBox {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.sizeButtons {
-    display: flex;
-    gap: 5px;
-}
-
-.sizeButton {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    cursor: pointer;
-    background: #fff;
+.sizeSelect {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
 }
 
 .quantity {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 10px 0;
 }
 
 .buttonGroup {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.backButton {
+    background-color: black;
+    color: white;
+    border: none; /* Remove border */
+    height: 50px;
+    width: 225px;
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    border-radius: 5px;
+
+
+
+
+
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
 }

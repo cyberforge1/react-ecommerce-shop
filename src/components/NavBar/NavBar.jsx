@@ -41,7 +41,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className={styles.icons}>
-          <FontAwesomeIcon icon={faSearch} className={styles.icon} onClick={handleSearchIconClick} />
+          <FontAwesomeIcon icon={faSearch} className={`${styles.icon} fa-search`} onClick={handleSearchIconClick} />
           <NavLink to="/favorites">
             <FontAwesomeIcon icon={faHeart} className={styles.icon} />
           </NavLink>

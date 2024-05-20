@@ -1,84 +1,68 @@
-// SingleProduct.jsx
-
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './SingleProduct.module.scss';
-import FavoriteButton from '../FavoriteButton/FavoriteButton';
+import ProductImageWithFavorite from '../ProductImageWithFavorite/ProductImageWithFavorite';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 const SingleProduct = ({ product, onFavoriteToggle }) => {
+    const navigate = useNavigate();
+
     if (!product) {
         return <div>Loading...</div>;
     }
 
     const {
         name = 'Product Name',
-        imageUrl = '',
         price = 0,
-        oldPrice = 0,
-        promoEndDate = 'N/A',
-        storeInfo = '',
-        quantity = 0,
-        colors = [],
-        sizes = [],
-        selectedColor = '',
-        selectedSize = ''
+        sizes = ['S', 'M', 'L', 'XL'], // Explicitly define the sizes
+        selectedSize = 'S' // Default selected size
     } = product;
 
-    const [quantityState, setQuantityState] = useState(quantity);
+    const [quantityState, setQuantityState] = useState(product.quantity);
+    const [selectedSizeState, setSelectedSizeState] = useState(selectedSize);
 
-    const handleDecreaseQuantity = () => {
-        if (quantityState > 0) {
-            setQuantityState(quantityState - 1);
-        }
+    const handleBackToProducts = () => {
+        navigate('/products');
     };
 
-    const handleVariantChange = (event) => {
-        console.log("Selected Variant:", event.target.value);
+    const handleSizeChange = (event) => {
+        setSelectedSizeState(event.target.value);
+    };
+
+    const handleDecreaseQuantity = () => {
+        setQuantityState(prevQuantity => prevQuantity - 1);
     };
 
     return (
         <div className={styles.container}>
-            <div className={styles.imgCard}>
-                <img src={imageUrl} alt={name} className={styles.imageStyle} />
+            <div className={styles.imageWrapper}>
+                <ProductImageWithFavorite product={product} onFavoriteToggle={onFavoriteToggle} />
             </div>
             <div className={styles.textCard}>
                 <h2>{name}</h2>
-                <p className={styles.oldPrice}>${oldPrice.toFixed(2)}</p>
                 <p className={styles.newPrice}>${price.toFixed(2)}</p>
-                <div className={styles.colorOptions}>
-                    <p>Colour: {selectedColor}</p>
-                    {colors.map((color, index) => (
-                        <div
-                            key={index}
-                            className={styles.colorBox}
-                            style={{ backgroundColor: color.hex }}
-                            title={color.name}
-                            onClick={() => console.log(`Selected color: ${color.name}`)}
-                        />
-                    ))}
-                </div>
                 <div className={styles.sizeOptions}>
-                    <p>Size: Unisex {selectedSize}</p>
-                    <div className={styles.sizeButtons}>
+                    <label htmlFor="sizes">Size: </label>
+                    <select
+                        id="sizes"
+                        value={selectedSizeState}
+                        onChange={handleSizeChange}
+                        className={styles.sizeSelect}
+                    >
                         {sizes.map((size, index) => (
-                            <button key={index} className={styles.sizeButton}>
+                            <option key={index} value={size}>
                                 {size}
-                            </button>
+                            </option>
                         ))}
-                    </div>
+                    </select>
                 </div>
                 <div className={styles.quantity}>
-                    <label htmlFor="quantity">Quantity:</label>
-                    <input
-                        type="number"
-                        id="quantity"
-                        value={quantityState}
-                        readOnly
-                    />
+                    <p>Quantity: {quantityState}</p>
                 </div>
                 <div className={styles.buttonGroup}>
-                    <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
+                    <button onClick={handleBackToProducts} className={styles.backButton}>
+                        BACK TO PRODUCTS
+                    </button>
                     <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />
                 </div>
             </div>

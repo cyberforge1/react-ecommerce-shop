@@ -1,6 +1,7 @@
 // FavoritedCard.jsx
 
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import ProductImageWithFavorite from '../ProductImageWithFavorite/ProductImageWithFavorite';
 import styles from './FavoritedCard.module.scss';
 
@@ -11,12 +12,11 @@ const FavoritedCard = ({ product, onFavoriteToggle }) => {
 
   return (
     <div className={styles.card}>
-      <div className={styles.imageWrapper}>
+      <NavLink to={`/products/${product.id}`} className={styles.imageWrapper}>
         <ProductImageWithFavorite product={product} onFavoriteToggle={onFavoriteToggle} />
-      </div>
+      </NavLink>
       <div className={styles.info}>
         <h4 className={styles.productName}>{product.name}</h4>
-        <p className={styles.color}>Colour: {product.color}</p>
         <p className={styles.size}>Size: {product.size}</p>
         <p className={styles.availability}>{product.availability}</p>
         <div className={styles.priceSection}>
