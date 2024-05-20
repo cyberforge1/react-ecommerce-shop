@@ -1,15 +1,28 @@
 // NavBar.jsx
 
-import styles from "./NavBar.module.scss";
-import { NavLink } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../../public/summit-shop-logo.png'; // Assuming you have the logo image in your project
+import logo from '../../../public/summit-shop-logo.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchForm from '../SearchForm/SearchForm';
+import styles from './NavBar.module.scss';
 
 const NavBar = () => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const handleSearchIconClick = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
+
+  const closeSearchForm = () => {
+    setIsSearchOpen(false);
+  };
+
   const linkStyles = ({ isActive }) =>
     isActive ? `nav-link ${styles.link} ${styles.link_active}` : `nav-link ${styles.link}`;
+
   return (
     <nav className={`navbar navbar-expand-lg navbar-light bg-light ${styles.nav}`}>
       <div className="container-fluid">
@@ -19,10 +32,16 @@ const NavBar = () => {
         <NavLink className={`${linkStyles} ${styles.title}`} to="/">
           Summit Shop
         </NavLink>
-        <div className={styles.icons}>
-          <NavLink to="/">
-            <FontAwesomeIcon icon={faSearch} className={styles.icon} />
+        <div className={styles.navLinks}>
+          <NavLink className={linkStyles} to="/mens">
+            Mens
           </NavLink>
+          <NavLink className={linkStyles} to="/womens">
+            Womens
+          </NavLink>
+        </div>
+        <div className={styles.icons}>
+          <FontAwesomeIcon icon={faSearch} className={styles.icon} onClick={handleSearchIconClick} />
           <NavLink to="/favorites">
             <FontAwesomeIcon icon={faHeart} className={styles.icon} />
           </NavLink>
@@ -34,10 +53,9 @@ const NavBar = () => {
           </NavLink>
         </div>
       </div>
+      {isSearchOpen && <SearchForm onClose={closeSearchForm} />}
     </nav>
   );
 };
 
 export default NavBar;
-
-

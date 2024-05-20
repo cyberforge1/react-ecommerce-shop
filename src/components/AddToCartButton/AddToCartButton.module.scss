@@ -1,5 +1,21 @@
 // AddToCartButton.module.scss
 
 .button {
+    background-color: #d0021b; /* Red background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
     height: 50px;
+    width: 200px; /* Adjust width as necessary */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.button:hover {
+    background-color: #b00117; /* Darker red on hover */
 }

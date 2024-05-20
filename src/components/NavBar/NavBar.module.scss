@@ -18,24 +18,14 @@
 .title {
   font-size: 24px;
   font-weight: bold;
-  margin-right: auto;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  font-size: 20px;
-  color: #333;
-  margin-right: 30px;
-
+  margin-right: 2rem;
 }
 
 .navLinks {
   display: flex;
+  align-items: center;
   gap: 2rem;
+  margin-right: auto;
 }
 
 .link {
@@ -57,9 +47,6 @@
     color: red;
     text-decoration: underline;
 
-    &:visited {
-      color: red;
-    }
 
     &:hover {
       color: darkred;

@@ -1,0 +1,15 @@
+// WomensPage.module.scss
+
+.container {
+    padding: 20px;
+  }
+  
+  .productsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .productsGrid p {
+    flex: 1 100%;
+  }
