@@ -1,3 +1,5 @@
+// SingleProduct.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './SingleProduct.module.scss';
@@ -35,35 +37,37 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.imageWrapper}>
-                <ProductImageWithFavorite product={product} onFavoriteToggle={onFavoriteToggle} />
-            </div>
-            <div className={styles.textCard}>
-                <h2>{name}</h2>
-                <p className={styles.newPrice}>${price.toFixed(2)}</p>
-                <div className={styles.sizeOptions}>
-                    <label htmlFor="sizes">Size: </label>
-                    <select
-                        id="sizes"
-                        value={selectedSizeState}
-                        onChange={handleSizeChange}
-                        className={styles.sizeSelect}
-                    >
-                        {sizes.map((size, index) => (
-                            <option key={index} value={size}>
-                                {size}
-                            </option>
-                        ))}
-                    </select>
+            <div className={styles.productBox}>
+                <div className={styles.imageWrapper}>
+                    <ProductImageWithFavorite product={product} onFavoriteToggle={onFavoriteToggle} />
                 </div>
-                <div className={styles.quantity}>
-                    <p>Quantity: {quantityState}</p>
-                </div>
-                <div className={styles.buttonGroup}>
-                    <button onClick={handleBackToProducts} className={styles.backButton}>
-                        BACK TO PRODUCTS
-                    </button>
-                    <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />
+                <div className={styles.textCard}>
+                    <h2>{name}</h2>
+                    <p className={styles.newPrice}>${price.toFixed(2)}</p>
+                    <div className={styles.sizeOptions}>
+                        <label htmlFor="sizes">Size: </label>
+                        <select
+                            id="sizes"
+                            value={selectedSizeState}
+                            onChange={handleSizeChange}
+                            className={styles.sizeSelect}
+                        >
+                            {sizes.map((size, index) => (
+                                <option key={index} value={size}>
+                                    {size}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className={styles.quantity}>
+                        <p>Quantity: {quantityState}</p>
+                    </div>
+                    <div className={styles.buttonGroup}>
+                        <button onClick={handleBackToProducts} className={styles.backButton}>
+                            BACK TO PRODUCTS
+                        </button>
+                        <AddToCartButton productId={product.id} onDecreaseQuantity={handleDecreaseQuantity} />
+                    </div>
                 </div>
             </div>
         </div>

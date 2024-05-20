@@ -4,29 +4,29 @@
     background-color: whitesmoke;
     padding: 20px;
     min-height: calc(100vh - 160px); // Use min-height to allow for vertical elongation
-}
-
-.title {
+  }
+  
+  .title {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-
-.contents {
+  }
+  
+  .contents {
     display: flex;
     flex-direction: column; // Stack items vertically
     gap: 20px; // Adjust the gap between the cards
     width: 100%;
-}
-
-.emptyWishlist {
+  }
+  
+  .emptyWishlist {
     width: 100%;
     text-align: start;
     padding: 20px;
@@ -34,20 +34,21 @@
     background-color: #fff;
     border-radius: 4px;
     margin-top: 20px;
-}
-
-.itemCount {
+  }
+  
+  .itemCount {
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.emptyTitle {
+  }
+  
+  .emptyTitle {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0;
-}
-
-.description {
+  }
+  
+  .description {
     font-size: 1em;
     margin: 10px 0;
-}
+  }
+  

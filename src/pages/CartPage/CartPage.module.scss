@@ -1,47 +1,45 @@
 /* CartPage.module.scss */
 
-/* CartPage.module.scss */
-
 .page {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
-}
+    min-height: calc(100vh - 160px); // Use min-height to allow for vertical elongation
+  }
   
-.title {
+  .title {
     margin: 20px 0;
-}
+  }
   
-.container {
+  .container {
     display: flex;
     width: 100%;
     min-height: 100%;
     flex-grow: 1;
-}
+  }
   
-.emptyCart {
+  .emptyCart {
     text-align: center;
     flex: 1;
-}
+  }
   
-.itemCount {
+  .itemCount {
     margin: 20px 0;
-}
+  }
   
-.emptyTitle {
+  .emptyTitle {
     font-size: 24px;
     margin: 20px 0;
-}
+  }
   
-.shopButton {
+  .shopButton {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-}
+  }
   
-.contentsWrapper {
+  .contentsWrapper {
     width: 50%;
     background-color: white;
     padding: 20px;
@@ -49,19 +47,20 @@
     overflow-y: auto;
     display: flex;
     justify-content: center;
-}
+  }
   
-.contents {
+  .contents {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+  }
   
-.rightSide {
+  .rightSide {
     width: 50%;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-}
+  }
+  

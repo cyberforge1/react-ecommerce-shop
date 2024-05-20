@@ -23,7 +23,6 @@
   position: absolute;
   top: 10px;
   right: 10px;
-
   cursor: pointer;
   z-index: 100; /* Ensure the button is above the image */
 }
@@ -48,8 +47,6 @@
   margin: 0.5em 0;
 }
 
-.productId,
-.color,
 .size,
 .availability {
   font-size: 1em;
@@ -71,6 +68,12 @@
   .originalPrice {
     text-decoration: line-through;
     color: #888;
+  }
+
+  .price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
   }
 }
 

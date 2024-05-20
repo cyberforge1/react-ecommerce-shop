@@ -1,17 +1,16 @@
 // ProductPage.module.scss
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  align-items: center;
+  height: calc(100vh - 75px); // Existing height setting
+  min-height: calc(100vh - 160px); // Use min-height to allow for vertical elongation
+}
 
 .title {
   text-align: center;
 }
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    align-items: center;
-    height: calc(100vh - 75px);
-  }  
-

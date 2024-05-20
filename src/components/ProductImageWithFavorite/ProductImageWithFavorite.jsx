@@ -9,10 +9,14 @@ const ProductImageWithFavorite = ({ product, onFavoriteToggle }) => {
     return <div>Loading...</div>;
   }
 
+  const handleFavoriteClick = (event) => {
+    event.stopPropagation(); // Stop the click event from bubbling up
+  };
+
   return (
     <div className={styles.imageContainer}>
       <img src={product.imageUrl} alt={product.name} className={styles.image} />
-      <div className={styles.favoriteButton}>
+      <div className={styles.favoriteButton} onClick={handleFavoriteClick}>
         <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} />
       </div>
     </div>
