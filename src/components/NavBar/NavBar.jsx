@@ -44,10 +44,10 @@ const NavBar = () => {
         <NavLink to="/products">
             <FontAwesomeIcon icon={faUser} className={styles.icon} />
           </NavLink>
-          <FontAwesomeIcon icon={faSearch} className={`${styles.icon} fa-search`} onClick={handleSearchIconClick} />
           <NavLink to="/favorites">
             <FontAwesomeIcon icon={faHeart} className={styles.icon} />
           </NavLink>
+          <FontAwesomeIcon icon={faSearch} className={`${styles.icon} fa-search`} onClick={handleSearchIconClick} />
           <NavLink to="/cart">
             <FontAwesomeIcon icon={faShoppingCart} className={styles.icon} />
           </NavLink>
