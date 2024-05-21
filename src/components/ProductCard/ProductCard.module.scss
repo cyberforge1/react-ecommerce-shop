@@ -103,3 +103,23 @@
   margin-left: auto; /* Push the button to the right */
   z-index: 1;
 }
+
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.filledStar,
+.halfStar,
+.emptyStar {
+  font-size: 20px;
+  color: #f8d64e; /* Gold color for stars */
+  margin-right: 2px;
+}
+
+.halfStar {
+  background: linear-gradient(to right, #f8d64e 50%, #ccc 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

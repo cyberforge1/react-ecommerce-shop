@@ -1,6 +1,5 @@
 // ProductCard.jsx
 
-
 import React from 'react';
 import styles from './ProductCard.module.scss';
 import { Link } from "react-router-dom";
@@ -15,6 +14,30 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
     return <div>Loading...</div>;
   }
 
+  const renderStars = (rating) => {
+    const totalStars = 5;
+    const validRating = Math.min(Math.max(parseFloat(rating), 0), totalStars);
+    const filledStars = Math.floor(validRating);
+    const halfStar = validRating % 1 !== 0 && filledStars < totalStars;
+    const emptyStars = totalStars - filledStars - (halfStar ? 1 : 0);
+
+    // Ensure the lengths are valid integers
+    const filledArray = Array.from({ length: filledStars }, (_, index) => index);
+    const emptyArray = Array.from({ length: emptyStars }, (_, index) => index);
+
+    return (
+      <div className={styles.stars}>
+        {filledArray.map((_, index) => (
+          <span key={index} className={styles.filledStar}>★</span>
+        ))}
+        {halfStar && <span className={styles.halfStar}>★</span>}
+        {emptyArray.map((_, index) => (
+          <span key={index} className={styles.emptyStar}>☆</span>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -24,8 +47,7 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
           </div>
         </Link>
       </div>
-      <div className={styles.header}>
-      </div>
+      <div className={styles.header}></div>
       {product.colors && (
         <div className={styles.productColors}>
           {product.colors.map((color, index) => (
@@ -41,7 +63,7 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
         <h4 className={styles.productName}>{product.name}</h4>
         <p className={styles.price}>${product.price}</p>
         <div className={styles.rating}>
-          <span className={styles.stars}>⭐⭐⭐⭐☆</span>
+          {renderStars(product.rating)} {/* Display stars based on rating */}
           <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} className={styles.favoriteButton} />
         </div>
       </div>
