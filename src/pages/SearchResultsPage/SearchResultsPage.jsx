@@ -44,7 +44,7 @@ const SearchResultsPage = () => {
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <p>No products found matching your search.</p>
+          <p className={styles.searchResult}>No products found matching your search.</p>
         )}
       </div>
       <div className={styles.buttonContainer}>

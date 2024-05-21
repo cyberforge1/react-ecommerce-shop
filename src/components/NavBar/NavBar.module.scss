@@ -16,16 +16,25 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-right: 2rem;
+  text-decoration: none; /* Remove underline */
+}
+
+.navLinksContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%; /* Occupy only the left 50% of the navbar */
 }
 
 .navLinks {
   display: flex;
+  justify-content: space-around; /* Evenly distribute links */
   align-items: center;
+  flex-grow: 1; /* Make the links container grow to take up available space */
   gap: 2rem;
-  margin-right: auto;
 }
 
 .link {

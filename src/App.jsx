@@ -1,4 +1,5 @@
 // App.jsx
+
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
@@ -7,8 +8,11 @@ import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import CartPage from './pages/CartPage/CartPage';
 import ProductLoader from './containers/ProductLoader/ProductLoader';
-import MensPage from './pages/MensPage/MensPage';
-import WomensPage from './pages/WomensPage/WomensPage';
+import JacketsAndVests from './pages/JacketsAndVests/JacketsAndVests';
+import TopsPage from './pages/TopsPage/TopsPage';
+import BottomsPage from './pages/BottomsPage/BottomsPage';
+import AccessoriesPage from './pages/AccessoriesPage/AccessoriesPage';
+import EquipmentPage from './pages/EquipmentPage/EquipmentPage';
 import SearchResultsPage from './pages/SearchResultsPage/SearchResultsPage'; // Import SearchResultsPage
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.module.scss';
@@ -25,8 +29,11 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<ProductLoader />} />
-          <Route path="/mens" element={<MensPage />} />
-          <Route path="/womens" element={<WomensPage />} />
+          <Route path="/jackets-vests" element={<JacketsAndVests />} />
+          <Route path="/tops" element={<TopsPage />} />
+          <Route path="/bottoms" element={<BottomsPage />} />
+          <Route path="/accessories" element={<AccessoriesPage />} />
+          <Route path="/equipment" element={<EquipmentPage />} />
           <Route path="/search" element={<SearchResultsPage />} /> {/* Add the search route */}
         </Routes>
         <Footer />

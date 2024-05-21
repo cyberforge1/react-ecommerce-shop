@@ -26,28 +26,37 @@ const NavBar = () => {
   return (
     <nav className={`navbar navbar-expand-lg navbar-light bg-light ${styles.nav}`}>
       <div className="container-fluid">
-        <NavLink to="/">
+        <NavLink to="/" className={styles.titleContainer}>
           <img src={logo} alt="Summit Shop Logo" className={styles.logo} />
+          <span className={`${linkStyles} ${styles.title}`}>Summit Shop</span>
         </NavLink>
-        <NavLink className={`${linkStyles} ${styles.title}`} to="/">
-          Summit Shop
-        </NavLink>
-        <div className={styles.navLinks}>
-          <NavLink className={linkStyles} to="/mens">
-            Mens
-          </NavLink>
-          <NavLink className={linkStyles} to="/womens">
-            Womens
-          </NavLink>
+        <div className={styles.navLinksContainer}>
+          <div className={styles.navLinks}>
+            <NavLink className={linkStyles} to="/products">
+              All Products
+            </NavLink>
+            <NavLink className={linkStyles} to="/jackets-vests">
+              Jackets & Vests
+            </NavLink>
+            <NavLink className={linkStyles} to="/tops">
+              Tops
+            </NavLink>
+            <NavLink className={linkStyles} to="/bottoms">
+              Bottoms
+            </NavLink>
+            <NavLink className={linkStyles} to="/accessories">
+              Accessories
+            </NavLink>
+            <NavLink className={linkStyles} to="/equipment">
+              Equipment
+            </NavLink>
+          </div>
         </div>
         <div className={styles.icons}>
-        <NavLink to="/products">
-            <FontAwesomeIcon icon={faUser} className={styles.icon} />
-          </NavLink>
+          <FontAwesomeIcon icon={faSearch} className={`${styles.icon} fa-search`} onClick={handleSearchIconClick} />
           <NavLink to="/favorites">
             <FontAwesomeIcon icon={faHeart} className={styles.icon} />
           </NavLink>
-          <FontAwesomeIcon icon={faSearch} className={`${styles.icon} fa-search`} onClick={handleSearchIconClick} />
           <NavLink to="/cart">
             <FontAwesomeIcon icon={faShoppingCart} className={styles.icon} />
           </NavLink>

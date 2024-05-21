@@ -1,0 +1,23 @@
+/* TopsPage.module.scss */
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Align items to the left
+    gap: 20px;
+    min-height: calc(100vh - 160px); // Ensure the container takes full height minus header/footer
+    justify-content: space-between; // Distribute space between elements
+  }
+  
+  .productsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .productsGrid p {
+    flex: 1 100%;
+  }
+  

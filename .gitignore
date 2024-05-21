@@ -1,2 +1,4 @@
 # Environment Variables
 .env
+/src/config/firestore.js
+/src/config/firestore-new.js

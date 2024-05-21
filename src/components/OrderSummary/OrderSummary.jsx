@@ -41,7 +41,6 @@ const OrderSummary = ({ subtotal, itemCount }) => {
                     <button className={styles.continueButton} onClick={handleContinueShopping}>CONTINUE SHOPPING</button>
                 </div>
                 <div className={styles.eligibleInfo}>
-                    <span>Eligible for free shipping.</span>
                 </div>
             </div>
         </div>
