@@ -13,6 +13,7 @@ const HomePageSection = ({ imageUrl, buttonText, buttonLink }) => {
 
   return (
     <div className={styles.container} style={{ backgroundImage: `url(${imageUrl})` }}>
+      <div className={styles.overlay}></div>
       <div className={styles.buttonContainer}>
         <button className={styles.button} onClick={handleClick}>
           {buttonText}

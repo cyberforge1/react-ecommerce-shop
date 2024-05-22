@@ -7,7 +7,7 @@ This project showcases a fully functional e-commerce website using React, design
 This e-shop is live! Check it out [here](https://react-ecommerce-store-project.netlify.app/).
 
 ## Screenshot
-![E-shop Homepage](public/project-screenshot.png)
+![E-shop Homepage](public/summit-shop-screenshot.png)
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)

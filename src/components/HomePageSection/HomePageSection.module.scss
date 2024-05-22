@@ -8,29 +8,46 @@
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Keep the button on the right-hand side */
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); // Add a dark overlay
+    z-index: 1;
+    transition: background 0.3s ease;
 }
 
 .buttonContainer {
-    width: 35%;
+    width: 50%;
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2; // Ensure button is above overlay
 }
 
 .button {
-    background-color: black;
-    color: white;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: 2px solid white;
     padding: 15px 30px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
 
     &:hover {
-        background-color: #333;
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
 }
