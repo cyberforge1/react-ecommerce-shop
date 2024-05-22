@@ -24,7 +24,7 @@ const FavoritedCard = ({ product, onFavoriteToggle }) => {
       <div className={styles.info}>
         <h4 className={styles.productName}>{product.name}</h4>
         <p className={styles.size}>Size: {product.size}</p>
-        <p className={styles.availability}>{product.availability ? 'In Stock' : 'Out of Stock'}</p>
+        <p className={styles.availability}>{product.quantity > 0 ? 'In Stock' : 'Out of Stock'}</p>
         <div className={styles.priceSection}>
           {product.discountedPrice ? (
             <>

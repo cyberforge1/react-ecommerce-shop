@@ -1,6 +1,5 @@
 // Carousel.jsx
 
-
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.scss';
 
@@ -25,7 +24,7 @@ const Carousel = ({ slides }) => {
       <div className={styles.carouselInner} style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {slides.map((slide, index) => (
           <div className={styles.carouselItem} key={index}>
-            {slide}
+            <img src={slide} alt={`Slide ${index}`} className={styles.image} />
           </div>
         ))}
       </div>
@@ -33,6 +32,6 @@ const Carousel = ({ slides }) => {
       <button className={styles.button} onClick={nextSlide}>→</button>
     </div>
   );
-}
+};
 
 export default Carousel;

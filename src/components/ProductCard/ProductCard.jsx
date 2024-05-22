@@ -58,7 +58,6 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
       <div className={styles.info}>
         <div className={styles.labels}>
           <p className={styles.unisexLabel}>UNISEX</p>
-          <p className={styles.sizeLabel}>XXS-XXL</p>
         </div>
         <h4 className={styles.productName}>{product.name}</h4>
         <p className={styles.price}>${product.price}</p>

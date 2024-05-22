@@ -26,9 +26,9 @@ const NavBar = () => {
   return (
     <nav className={`navbar navbar-expand-lg navbar-light bg-light ${styles.nav}`}>
       <div className="container-fluid">
-        <NavLink to="/" className={styles.titleContainer}>
+        <NavLink to="/" className={styles.titleContainer} style={{ textDecoration: 'none' }}>
           <img src={logo} alt="Summit Shop Logo" className={styles.logo} />
-          <span className={`${linkStyles} ${styles.title}`}>Summit Shop</span>
+          <span className={styles.title}>Summit Shop</span>
         </NavLink>
         <div className={styles.navLinksContainer}>
           <div className={styles.navLinks}>
