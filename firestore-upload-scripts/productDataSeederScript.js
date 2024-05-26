@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { promises as fs } from "fs";
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "XXXXXXXXXXXXXXXX",
-  authDomain: "XXXXXXXXXXXXXXXX",
-  projectId: "XXXXXXXXXXXXXXXX",
-  storageBucket: "XXXXXXXXXXXXXXXX",
-  messagingSenderId: "XXXXXXXXXXXXXXXX",
-  appId: "XXXXXXXXXXXXXXXX"
-};
+    apiKey: "XXXXXXXXXXXXXXXX",
+    authDomain: "XXXXXXXXXXXXXXXX",
+    projectId: "XXXXXXXXXXXXXXXX",
+    storageBucket: "XXXXXXXXXXXXXXXX",
+    messagingSenderId: "XXXXXXXXXXXXXXXX",
+    appId: "XXXXXXXXXXXXXXXX"
+  };
 
 
 // Initialize Firebase
@@ -681,21 +683,23 @@ const data = [
   ]
   
 
-
+  const uploadData = async () => {
+    try {
+      const collectionRef = collection(db, "products");
+      const ids = [];
   
-
-const uploadData = async () => {
-  try {
-    const collectionRef = collection(db, "products");
-
-    for (const item of data) {
-      await addDoc(collectionRef, item);
+      for (const item of data) {
+        const docRef = await addDoc(collectionRef, item);
+        ids.push({ id: docRef.id, ...item });
+      }
+  
+      // Write the IDs and data to a JSON file
+      await fs.writeFile("productIds.json", JSON.stringify(ids, null, 2));
+      console.log("Data uploaded and IDs saved successfully!");
+    } catch (error) {
+      console.error("Error uploading data: ", error);
     }
-    console.log("Data uploaded successfully!");
-  } catch (error) {
-    console.error("Error uploading data: ", error);
-  }
-};
-
-// Run the upload function
-uploadData();
+  };
+  
+  // Run the upload function
+  uploadData();
