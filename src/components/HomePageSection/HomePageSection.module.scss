@@ -2,38 +2,49 @@
 
 .container {
     width: 100vw;
-    min-height: calc(100vh - 80px); // Use min-height to allow for vertical elongation
+    height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Keep the button on the right-hand side */
+    justify-content: flex-end; /* Default: button on the right-hand side */
     position: relative;
-    overflow: hidden;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2); // Add a dark overlay
-    z-index: 1;
-    transition: background 0.3s ease;
-}
-
-.buttonContainer {
-    width: 50%;
-    height: 50%;
+  }
+  
+  .buttonContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 2; // Ensure button is above overlay
-}
-
-.button {
+    position: absolute;
+  }
+  
+  .buttonContainer.top-left {
+    top: 25%;
+    left: 10%;
+  }
+  
+  .buttonContainer.top-right {
+    top: 40%;
+    right: 20%;
+  }
+  
+  .buttonContainer.bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .buttonContainer.bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .buttonContainer.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button {
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     border: 2px solid white;
@@ -44,10 +55,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
-
+  
     &:hover {
-        background-color: white;
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+      background-color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
-}
+  }
+  

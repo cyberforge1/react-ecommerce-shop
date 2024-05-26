@@ -38,18 +38,31 @@ const HomePage = () => {
   return (
     <div>
       <div ref={(el) => (sectionRefs.current[0] = el)}>
-        <HomePageSection imageUrl={sampleImage1} buttonText="BROWSE COLLECTION" buttonLink="/jackets-vests" />
+        <HomePageSection
+          imageUrl={sampleImage1}
+          buttonText="BROWSE COLLECTION"
+          buttonLink="/jackets-vests"
+          buttonPosition="top-right"
+        />
       </div>
       <div ref={(el) => (sectionRefs.current[1] = el)}>
-        <HomePageSection imageUrl={sampleImage2} buttonText="EXPLORE MORE" buttonLink="/equipment" />
+        <HomePageSection
+          imageUrl={sampleImage2}
+          buttonText="EXPLORE MORE"
+          buttonLink="/accessories"
+          buttonPosition="center"
+        />
       </div>
       <div ref={(el) => (sectionRefs.current[2] = el)}>
-        <HomePageSection imageUrl={sampleImage3} buttonText="DISCOVER NOW" buttonLink="/accessories" />
+        <HomePageSection
+          imageUrl={sampleImage3}
+          buttonText="DISCOVER NOW"
+          buttonLink="/equipment"
+          buttonPosition="top-left"
+        />
       </div>
     </div>
   );
 };
 
 export default HomePage;
-
-

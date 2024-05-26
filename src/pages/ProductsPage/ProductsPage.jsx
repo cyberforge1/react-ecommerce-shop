@@ -7,9 +7,9 @@ import ProductsAll from '../../components/ProductsAll/ProductsAll';
 import Carousel from '../../components/Carousel/Carousel'; // Import the original Carousel component
 
 const imageUrls = [
-  'https://i.imgur.com/Lzc5jvt.png',
-  'https://i.imgur.com/eaMnThx.png',
-  'https://i.imgur.com/af0hhtP.png',
+  'https://i.imgur.com/gXw4EKP.png',
+  'https://i.imgur.com/2cd2cyz.png',
+  'https://i.imgur.com/KAlLLoX.png',
 ];
 
 const ProductsPage = () => {
