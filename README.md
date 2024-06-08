@@ -46,6 +46,7 @@ Currently addressing an error with the functions related to favouriting products
 
 ## Additions & Improvements
 Future enhancements include:
+- Change the landing page to be the products page while maintaining the current homepage
 - More attractive card components.
 - A unique component for favorited products.
 - Improved responsiveness and additional Bootstrap features for better layout across different devices.
