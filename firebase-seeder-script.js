@@ -25,7 +25,6 @@ const products = [
     offer: "Winter Sale",
     offerEndDate: "2024-12-31"
   },
-  // ...other products
 ];
 
 products.forEach(async (product) => {

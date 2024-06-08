@@ -4,7 +4,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "XXXXXXXXXXXXXXXX",
     authDomain: "XXXXXXXXXXXXXXXX",
@@ -15,11 +15,9 @@ const firebaseConfig = {
   };
 
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Function to seed cart collection
 const seedCartCollection = async () => {
   try {
     const __filename = fileURLToPath(import.meta.url);
@@ -44,5 +42,4 @@ const seedCartCollection = async () => {
   }
 };
 
-// Run the seeding function
 seedCartCollection();

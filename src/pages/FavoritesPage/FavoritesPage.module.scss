@@ -3,7 +3,7 @@
 .page {
     background-color: whitesmoke;
     padding: 20px;
-    min-height: calc(100vh - 160px); // Use min-height to allow for vertical elongation
+    min-height: calc(100vh - 160px);
   }
   
   .title {
@@ -21,8 +21,8 @@
   
   .contents {
     display: flex;
-    flex-direction: column; // Stack items vertically
-    gap: 20px; // Adjust the gap between the cards
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
   }
   

@@ -10,7 +10,7 @@ const ProductImageWithFavorite = ({ product, onFavoriteToggle }) => {
   }
 
   const handleFavoriteClick = (event) => {
-    event.stopPropagation(); // Stop the click event from bubbling up
+    event.stopPropagation();
   };
 
   return (

@@ -29,15 +29,15 @@
 .iconButton {
   background: none;
   border: none;
-  padding: 15px; /* Increase padding for more spacing */
+  padding: 15px;
   cursor: pointer;
-  font-size: 30px; /* Increase icon size */
-  color: #000; /* Adjust color as needed */
+  font-size: 30px;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .iconButton:hover {
-  color: #555; /* Adjust hover color as needed */
+  color: #555;
 }

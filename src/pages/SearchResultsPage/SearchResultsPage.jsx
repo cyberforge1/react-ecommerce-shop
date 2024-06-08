@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { getAllProducts } from '../../services/firebase-service';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import styles from './SearchResultsPage.module.scss';
-import buttonStyles from '../../components/SingleProduct/SingleProduct.module.scss'; // Import button styles
+import buttonStyles from '../../components/SingleProduct/SingleProduct.module.scss';
 
 const SearchResultsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);

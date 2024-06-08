@@ -21,7 +21,7 @@
 .imageStyle {
   width: 100%;
   height: 0;
-  padding-bottom: 100%; /* Makes the height equal to the width */
+  padding-bottom: 100%;
   position: relative;
   overflow: hidden;
 
@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover;
   }
 }
 
@@ -85,7 +85,7 @@
 .rating {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjust to ensure spacing between elements */
+  justify-content: space-between;
   gap: 5px;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .favoriteButton {
-  margin-left: auto; /* Push the button to the right */
+  margin-left: auto;
   z-index: 1;
 }
 
@@ -113,7 +113,7 @@
 .halfStar,
 .emptyStar {
   font-size: 20px;
-  color: #f8d64e; /* Gold color for stars */
+  color: #f8d64e;
   margin-right: 2px;
 }
 

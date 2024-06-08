@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh - 160px); // Use min-height to allow for vertical elongation
-    background-color: #f5f5f5; // Optional: Add a background color for better contrast
+    min-height: calc(100vh - 160px);
+    background-color: #f5f5f5;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -14,7 +14,7 @@
 .productBox {
     display: flex;
     flex-direction: row;
-    width: 80%; // Adjust width as needed
+    width: 80%;
     max-width: 1000px;
     background-color: #fff;
     border-radius: 10px;

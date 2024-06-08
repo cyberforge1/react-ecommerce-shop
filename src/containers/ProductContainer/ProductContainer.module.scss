@@ -1,10 +1,10 @@
 // ProductContainer.module.scss
 
 .container {
-    width: 100%; // Make container full width
+    width: 100%;
     display: flex;
-    justify-content: center; // Center child components horizontally
-    align-items: center; // Center child components vertically
-    padding: 20px; // Optional: Add some padding for better spacing
-    box-sizing: border-box; // Ensure padding is included in the width calculation
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }

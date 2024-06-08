@@ -13,7 +13,7 @@ import TopsPage from './pages/TopsPage/TopsPage';
 import BottomsPage from './pages/BottomsPage/BottomsPage';
 import AccessoriesPage from './pages/AccessoriesPage/AccessoriesPage';
 import EquipmentPage from './pages/EquipmentPage/EquipmentPage';
-import SearchResultsPage from './pages/SearchResultsPage/SearchResultsPage'; // Import SearchResultsPage
+import SearchResultsPage from './pages/SearchResultsPage/SearchResultsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.module.scss';
 import Footer from './components/Footer/Footer';
@@ -34,7 +34,7 @@ function App() {
           <Route path="/bottoms" element={<BottomsPage />} />
           <Route path="/accessories" element={<AccessoriesPage />} />
           <Route path="/equipment" element={<EquipmentPage />} />
-          <Route path="/search" element={<SearchResultsPage />} /> {/* Add the search route */}
+          <Route path="/search" element={<SearchResultsPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

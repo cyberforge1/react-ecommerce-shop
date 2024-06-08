@@ -2,10 +2,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import HomePageSection from '../../components/HomePageSection/HomePageSection';
-import sampleImage1 from '/background1.png'; // Replace with the path to your first image
-import sampleImage2 from '/background2.png'; // Replace with the path to your second image
-import sampleImage3 from '/background3.png'; // Replace with the path to your third image
-import 'fullpage.js/dist/fullpage.css'; // Import fullpage.js CSS
+import sampleImage1 from '/background1.png';
+import sampleImage2 from '/background2.png';
+import sampleImage3 from '/background3.png';
+import 'fullpage.js/dist/fullpage.css';
 
 const HomePage = () => {
   const sectionRefs = useRef([]);

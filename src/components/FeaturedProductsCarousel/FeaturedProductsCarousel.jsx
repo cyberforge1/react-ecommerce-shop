@@ -25,7 +25,7 @@ const FeaturedProductsCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredProducts.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [featuredProducts.length]);

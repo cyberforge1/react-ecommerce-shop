@@ -21,7 +21,6 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
     const halfStar = validRating % 1 !== 0 && filledStars < totalStars;
     const emptyStars = totalStars - filledStars - (halfStar ? 1 : 0);
 
-    // Ensure the lengths are valid integers
     const filledArray = Array.from({ length: filledStars }, (_, index) => index);
     const emptyArray = Array.from({ length: emptyStars }, (_, index) => index);
 
@@ -62,7 +61,7 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
         <h4 className={styles.productName}>{product.name}</h4>
         <p className={styles.price}>${product.price}</p>
         <div className={styles.rating}>
-          {renderStars(product.rating)} {/* Display stars based on rating */}
+          {renderStars(product.rating)}
           <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} className={styles.favoriteButton} />
         </div>
       </div>

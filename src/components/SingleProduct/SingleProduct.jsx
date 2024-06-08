@@ -16,8 +16,8 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
     const {
         name = 'Product Name',
         price = 0,
-        sizes = ['S', 'M', 'L', 'XL'], // Explicitly define the sizes
-        selectedSize = 'S' // Default selected size
+        sizes = ['S', 'M', 'L', 'XL'],
+        selectedSize = 'S'
     } = product;
 
     const [quantityState, setQuantityState] = useState(product.quantity);

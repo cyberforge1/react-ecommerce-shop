@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './FavoritesPage.module.scss';
-import FavoritedCard from '../../components/FavoritedCard/FavoritedCard'; // Import the FavoritedCard component
+import FavoritedCard from '../../components/FavoritedCard/FavoritedCard';
 import { getAllProducts } from '../../services/firebase-service';
 
 const FavoritesPage = () => {
