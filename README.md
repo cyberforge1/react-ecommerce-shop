@@ -39,10 +39,7 @@ The primary goal is to build a reactive e-shop website to demonstrate the abilit
 
 
 ## Build Steps
-1. How to build/run the project (use proper code snippets)
-ex.
-  ```bash
-  git clone git@github.com:cyberforge1/some-project.git
+1. How to build/run the project
 
 
 ## How to use
