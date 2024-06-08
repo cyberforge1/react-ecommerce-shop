@@ -1,7 +1,9 @@
 # Summit Shop - React E-commerce Store
 
+
 ## Project Overview
 This project showcases a fully functional e-commerce website using React, designed to enhance my understanding and skills in web development. It leverages Firestore for data management and react-router-dom for seamless navigation.
+
 
 ## Deployment Link
 This e-shop is live! Check it out [here](https://react-ecommerce-store-project.netlify.app/).
@@ -9,14 +11,22 @@ This e-shop is live! Check it out [here](https://react-ecommerce-store-project.n
 ## Screenshot
 ![E-shop Homepage](public/summit-shop-project-screenshot.png)
 
+
 ## Table of Contents
+- [Goals & MVP](#goals--MVP)
 - [Tech Stack](#tech-stack)
-- [Goals](#goals)
-- [How to use](#how-to-use)
-- [Implementation](#implementation)
-- [Code / Important Elements / Design Decisions](#code--important-elements--design-decisions)
-- [Issues & Bugs](#issues--bugs)
+- [Build Steps](#build-steps)
+- [Design Goals](#design-goals)
+- [Project Features](#project-features)
 - [Additions & Improvements](#additions--improvements)
+- [Learning Highlights](#learning-highlights)
+- [Known Issues](#known-issues)
+- [Challenges](#challenges)
+
+
+## Goals & MVP
+The primary goal is to build a reactive e-shop website to demonstrate the ability to fetch and manage data using Firebase, navigate between different components with React Router, and implement dynamic user interactions.
+
 
 ## Tech Stack
 - HTML
@@ -27,36 +37,65 @@ This e-shop is live! Check it out [here](https://react-ecommerce-store-project.n
 - React Router DOM
 - Google Firestore
 
-## Goals
-The primary goal is to build a reactive e-shop website to demonstrate the ability to fetch and manage data using Firebase, navigate between different components with React Router, and implement dynamic user interactions.
+
+## Build Steps
+1. How to build/run the project (use proper code snippets)
+ex.
+  ```bash
+  git clone git@github.com:cyberforge1/some-project.git
+
 
 ## How to use
 To start exploring the e-shop, visit the homepage where you can browse products, view details, and add items to your cart. Use the navigation links to switch between different views and manage your cart.
 
-## Implementation
-- **MVP (basic requirements):** The website features a home page with a grid of products and a detailed product page allowing item addition to the cart.
-- **User Interface:** The design is responsive, focusing on usability across devices.
-- **Logic Strategy:** Data fetching from Firestore ensures real-time product updates without needing static data.
 
-## Code / Important Elements / Design Decisions
-Emphasized the use of functional components in React and hooks for state management. Decision to use Firestore was driven by the need for real-time data updates and easy scalability.
+## Design Goals
+- Emphasized the use of functional components in React and hooks for state management. 
+- Decision to use Firestore was driven by the need for real-time data updates and easy scalability.
 
-## Issues & Bugs
-Currently addressing an error with the functions related to favouriting products.
+## Project Features
+- [x] A dynamic carousel that swaps images on a timer
+- [x] Firestore seeder scripts for database population
+- [x] Product images generated exclusively by Midjourney AI
+- [x] Search functionality built into the NavBar
+- [x] Separate Cart database collection to separate concerns and improve scalability
+- [x] Ability to favorite products and add them to cart
 
 ## Additions & Improvements
-Future enhancements include:
-- Change the landing page to be the products page while maintaining the current homepage
-- More attractive card components.
-- A unique component for favorited products.
-- Improved responsiveness and additional Bootstrap features for better layout across different devices.
-- A loading spinner for better user experience during data fetch.
-- Integration of Stripe for test mode transactions.
+- [ ] Re-seed the database
+- [ ] Crop background on products page
+- [ ] Change the landing page to be the products page while maintaining the current homepage
+- [ ] Addition of mobile responsive design
+- [ ] Integration of Stripe for test mode transactions.
+
 
 ## Learning Highlights
-This project has been instrumental in understanding React's lifecycle, the importance of state management, and the complexities of integrating a NoSQL database like Firestore.
+- Building more dynamic components in React
+- Integration of a Firestore database
+- Creating JavaScript database seeding scripts
+- Dynamic filtering and searching of data on page 
 
-Contact Me:
+
+## Change Logs
+- List of dates and features worked on 
+
+
+## Known Issues
+- List errors
+
+
+## Challenges
+- Database seeding 
+- Building carousel 
+- Fetching product data
+
+
+## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
-- Visit my [GitHub](https://github.com/cyberforge1) for more projects.
+- Check out my [GitHub](https://github.com/cyberforge1) for more projects.
 - Or send me an email at obj809@gmail.com
+<br />
+Thanks for your interest in this project. Feel free to reach out with any thoughts or questions.
+<br />
+<br />
+Oliver Jenkins © 2024
