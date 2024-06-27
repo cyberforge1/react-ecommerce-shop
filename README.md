@@ -59,7 +59,6 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 - [x] Ability to favorite products and add them to cart
 
 ## Additions & Improvements
-- [ ] Re-seed the database
 - [ ] Crop background on products page
 - [ ] Change the landing page to be the products page while maintaining the current homepage
 - [ ] Addition of mobile responsive design
@@ -71,14 +70,6 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 - Integration of a Firestore database
 - Creating JavaScript database seeding scripts
 - Dynamic filtering and searching of data on page 
-
-
-## Change Logs
-- List of dates and features worked on 
-
-
-## Known Issues
-- List errors
 
 
 ## Challenges
