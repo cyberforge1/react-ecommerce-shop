@@ -5,14 +5,14 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 // Firebase configuration
-const firebaseConfig = {
-    apiKey: "XXXXXXXXXXXXXXXX",
-    authDomain: "XXXXXXXXXXXXXXXX",
-    projectId: "XXXXXXXXXXXXXXXX",
-    storageBucket: "XXXXXXXXXXXXXXXX",
-    messagingSenderId: "XXXXXXXXXXXXXXXX",
-    appId: "XXXXXXXXXXXXXXXX"
-  };
+// const firebaseConfig = {
+//     apiKey: "XXXXXXXXXXXXXXXX",
+//     authDomain: "XXXXXXXXXXXXXXXX",
+//     projectId: "XXXXXXXXXXXXXXXX",
+//     storageBucket: "XXXXXXXXXXXXXXXX",
+//     messagingSenderId: "XXXXXXXXXXXXXXXX",
+//     appId: "XXXXXXXXXXXXXXXX"
+//   };
 
 
 const app = initializeApp(firebaseConfig);
