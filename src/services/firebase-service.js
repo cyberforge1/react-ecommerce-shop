@@ -1,16 +1,17 @@
 //firebase-service.js
 
 import {
-    addDoc,
-    collection,
-    deleteDoc,
-    doc,
-    getDoc,
-    getDocs,
-    onSnapshot,
-    updateDoc,
-  } from "firebase/firestore";
-  import { db } from "../config/firestore.js";
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  getDocs,
+  onSnapshot,
+  updateDoc,
+  setDoc, // <-- Add this line
+} from "firebase/firestore";
+import { db } from "../config/firestore.js";
 
 
 
